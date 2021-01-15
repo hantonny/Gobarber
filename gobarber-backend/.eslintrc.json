@@ -4,7 +4,8 @@
         "node": true
     },
     "extends": [
-        "airbnb-base"
+        "airbnb-base",
+        "prettier"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -16,7 +17,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "prettier"
     ],
     "rules": {
         "no-underscore-dangle": "off",
@@ -28,6 +30,7 @@
                 "argsIgorePattern": "_"
             }
         ],
+        "@typescript-eslint/interface-name-prefix": ["error", {"prefixWithI": "always"}],
         "import/extensions": [
             "error",
             "ignorePackages",
