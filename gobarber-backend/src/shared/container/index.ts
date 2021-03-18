@@ -12,6 +12,9 @@ import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepo
 import IUserTokensRepository from '@modules/users/repositories/IUserTokensRepository';
 import UserTokensRepository from '@modules/users/infra/typeorm/repositories/UserTokensRepository';
 
+import IMailProvider from '@shared/container/providers/MailProvider/models/IMailProvider'
+import MailProvider from '@shared/container/providers/MailProvider/implementations/EtherealMailProvider'
+
 container.registerSingleton<IAppointmentsRepository>(
   'AppointmentsRepository', AppointmentsRepository
 );
@@ -20,4 +23,8 @@ container.registerSingleton<IUsersRepository>(
 );
 container.registerSingleton<IUserTokensRepository>(
   'UserTokensRepository', UserTokensRepository
+);
+
+container.registerSingleton<IMailProvider>(
+  'MailProvider', MailProvider
 );
