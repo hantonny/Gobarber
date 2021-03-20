@@ -15,6 +15,7 @@ describe('SendForgotPasswordEmail', () => {
 
   beforeEach(() => {
     fakeUsersRepository = new FakeUsersRepository();
+
     fakeMailProvider = new FakeMailProvider();
     fakeUserTokensRepository = new FakeUserTokensRepository();
     sendForgotPasswordEmail = new SendForgotPasswordEmail(fakeUsersRepository, fakeMailProvider, fakeUserTokensRepository);
