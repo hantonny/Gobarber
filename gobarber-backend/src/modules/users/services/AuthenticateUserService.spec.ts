@@ -19,7 +19,7 @@ describe('AuthenticateUser', () => {
 
   })
   it('should be able to authenticate', async () => {
-    
+
     const user = await createUser.execute({
       name: 'Gustavo Marcos',
       email: 'gustavoMarcos@gmail.com',
