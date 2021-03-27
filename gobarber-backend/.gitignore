@@ -60,3 +60,6 @@ buck-out/
 
 tmp/*
 !tmp/.gitkeep
+.env
+coverage
+ormconfig.json
