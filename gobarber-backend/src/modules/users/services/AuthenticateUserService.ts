@@ -41,8 +41,8 @@ class AuthenticationUserService {
     if (!passwordMatched) {
       throw new AppError('Incorrect email/password combination.', 401);
     }
-    const { expiresIn } = authConfig.jwt;
-    const token = sign({}, expiresIn, {
+    const { secret, expiresIn } = authConfig.jwt;
+    const token = sign({}, secret, {
       subject: user.id,
       expiresIn,
 
