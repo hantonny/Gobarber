@@ -7,7 +7,6 @@
 - [2. 👁️ Prévia da Aplicação](#2-️-prévia-da-aplicação)
 - [3. 💻️ Tecnologias Usadas](#3-️-tecnologias-usadas)
 - [4. 🤔 Como contribuir](#4--como-contribuir)
-<br>
 
 # 1. 🚀️ O projeto
 Aplicação para agendar e gerenciar serviços de beleza, onde prestadores de serviços podem se cadastrar, e usuários poderão marcar agendamentos com estes provedores.
