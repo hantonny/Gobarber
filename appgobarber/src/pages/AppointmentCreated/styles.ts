@@ -20,6 +20,8 @@ export const Description = styled.Text`
     font-size: 18px;
     color: #999591;
     margin-top: 16px;
+    text-align: center;
+    align-items: center;
 `;
 export const OkButton = styled(RectButton)`
     background: #ff9000;
