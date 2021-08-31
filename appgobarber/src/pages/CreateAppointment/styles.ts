@@ -104,7 +104,7 @@ export const OpenDatePickerButton = styled(RectButton)`
 export const OpenDatePickerButtonText = styled.Text`
     font-family: 'RobotoSlab-Medium';
     font-size: 16px;
-    /* color: '#232129'; */
+    color: #232129;
 `;
 
 export const Schedule = styled.View`
@@ -150,5 +150,5 @@ export const CreateAppointmentButton = styled(RectButton)`
 export const CreateAppointmentButtonText = styled.Text`
     font-family: 'RobotoSlab-Medium';
     font-size: 18px;
-    /* color: '#232129'; */
+    color: #232129;
 `;
