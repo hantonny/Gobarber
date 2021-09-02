@@ -6,12 +6,13 @@ import React, {
   useState,
   useCallback,
 } from 'react';
-import {TextInputProps} from 'react-native';
-import {useField} from '@unform/core';
+import { TextInputProps } from 'react-native';
+import { useField } from '@unform/core';
 
 interface InputProps extends TextInputProps {
   name: string;
   icon: string;
+  containerStyle?: {}
 }
 interface InputValueReference {
   value: string;
@@ -21,15 +22,15 @@ interface InputRef {
   focus(): void;
 }
 
-import {Container, TextInput, Icon} from './styles';
+import { Container, TextInput, Icon } from './styles';
 
 const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
-  {name, icon, ...rest},
+  { name, icon, containerStyle = {}, ...rest },
   ref,
 ) => {
   const inputElementRef = useRef<any>(null);
-  const {registerField, defaultValue = '', fieldName, error} = useField(name);
-  const inputValueRef = useRef<InputValueReference>({value: defaultValue});
+  const { registerField, defaultValue = '', fieldName, error } = useField(name);
+  const inputValueRef = useRef<InputValueReference>({ value: defaultValue });
 
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
@@ -61,7 +62,7 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
       path: 'value',
       setValue(ref: any, value) {
         inputValueRef.current.value = value;
-        inputElementRef.current.setNativeProps({text: value});
+        inputElementRef.current.setNativeProps({ text: value });
       },
       clearValue() {
         inputValueRef.current.value = '';
@@ -70,7 +71,7 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
     });
   }, [fieldName, registerField]);
   return (
-    <Container isFocused={isFocused} isErrored={!!error}>
+    <Container style={containerStyle} isFocused={isFocused} isErrored={!!error}>
       <Icon
         name={icon}
         size={20}

@@ -21,6 +21,7 @@ export const HeaderTitle = styled.Text`
     font-size: 24px;
     font-family: 'RobotoSlab-Regular';
     line-height: 28px;
+     margin-top: 10px;
 `;
 export const UserName = styled.Text`
     color: #ff9000;
@@ -29,9 +30,10 @@ export const UserName = styled.Text`
 export const ProfileButton = styled.TouchableOpacity`
 `;
 export const UserAvatar = styled.Image`
-    width: 56px;
-    height: 56px;
-    border-radius: 28px;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin-top: 5px;
     
 `;
 export const ProvidersList = styled(
