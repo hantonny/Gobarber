@@ -23,8 +23,8 @@ export const UserAvatarButton = styled.TouchableOpacity`
 `;
 
 export const UserAvatar = styled.Image`
-  width: 130px;
-  height: 130px;
-  border-radius: 80px;
+  width: 186px;
+  height: 186px;
+  border-radius: 98px;
   align-self: center;
 `;
